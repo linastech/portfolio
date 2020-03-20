@@ -1,0 +1,175 @@
+.wrapper{
+  background: url('/static/images/works_bg.png');
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+}
+h3{
+  font-size: 2.1rem;
+  text-align: center;
+  margin: 60px 0 20px;
+}
+.list{
+  list-style: none;
+  width: var(--content-width);
+  max-width: var(--content-max-width);
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50% 50%;
+  grid-column-gap: 50px;
+  margin: 40px auto 10px;
+  padding: 0px;
+  position: relative;
+}
+.list > li{
+  display: block;
+  position: relative;
+  height: 100%;
+}
+.active{
+  z-index: 3;
+}
+.list > li:hover .innerWrapper{
+  height: 200%;
+}
+.innerWrapper{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+  z-index: 1;
+  transition: all 300ms ease-in-out;
+  border-radius: 10px;
+  box-shadow: 4px 4px 0px rgba(0,0,0,.1);
+}
+.bg{
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 300ms ease-in-out;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+/* Bike sense */
+.bikesenseTop{
+  background-image: url('/static/images/works/bikesense-top.png');
+  height: 146px;
+  margin: 35px 0 0;
+}
+.list > li:nth-child(1):hover .bikesenseTop{
+  margin-top: 50px;
+}
+.bikesenseBot{
+  background-image: url('/static/images/works/bikesense-bottom.png');
+  height: 159px;
+  margin: 20px 0  0;
+}
+
+/* Archetype */
+.archetypeTop{
+  background-image: url('/static/images/works/archetype-top.png');
+  background-size: contain;
+  height: 169px;
+  margin-top: 10px;
+  transform: rotate(0deg);
+}
+.archetypeBot{
+  background-image: url('/static/images/works/archetype-bottom.png');
+  height: 69px;
+  margin-top: 15px;
+}
+.list > li:nth-child(3):hover .archetypeTop{
+  margin-top: 50px;
+  height: 250px;
+  transform: rotate(360deg);
+}
+
+/* Ocean Pulser */
+.oceanpulser{
+  background-image: url('/static/images/works/oceanpulser.png');
+  background-color: #fff;
+  background-size: contain;
+  height: 100%;
+}
+
+h5{
+  margin: 20px 0 0;
+  font-size: 1rem;
+  text-align: center;
+}
+h5 > a{
+  color: #4b4b4b;
+  text-decoration: none;
+  position: relative;
+  transition: all 300ms ease-in-out;
+}
+h5 > a:after{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0%;
+  height: 1px;
+  content: '';
+  background-color: #4b4b4b;
+  transition: all 300ms ease-in-out;	
+}
+h5 > a:hover{
+  color: #000;
+}
+h5 > a:hover:after{
+  width: 100%;
+}
+.description, .gitDesc{
+  text-align: justify;
+  padding: 10px 12px;
+  line-height: 1.2rem;
+  font-size: .9rem;
+  color:  #696969;
+  margin: 0px;
+}
+.github{
+  text-align: center;
+}
+.githubImg{
+  width: 100px;
+}
+.gitDesc{
+  text-align: center !important;
+  margin-bottom: 40px;
+}
+.gitDesc a{
+  color:  #696969;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media all and (max-width: 1000px) {
+  .list{
+    width: 400px;
+    max-width: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+  }
+  .list li:nth-child(1), 
+  .list li:nth-child(2), 
+  .list li:nth-child(3)
+  {
+    min-height: 200px;
+  }
+  .list li:nth-child(4){
+    grid-area: 2 / 1;
+  }
+  .list li:nth-child(5){
+    grid-area: 4 / 1;
+  }
+
+  .list li:nth-child(4) p, 
+  .list li:nth-child(5) p, 
+  .list li:nth-child(6) p{
+    padding-bottom: 120px;
+  }
+}

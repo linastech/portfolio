@@ -1,0 +1,68 @@
+@import 'node_modules/normalize-scss/sass/normalize/import-now';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700'); 
+
+:root{
+  --content-max-width: 1200px;
+  --content-width: 80%;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 100%;
+}
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+
+:global .typer {
+  position: relative;
+  min-height: 2ex;
+}
+:global .typer::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 0.1em;
+  height: 1.1em;
+  background-color: currentColor;
+  margin-left: 0.1em;
+}
+:global .cursor-block::after {
+  width: 1px;
+}
+:global .cursor-soft::after {
+  animation: softblink 0.7s infinite;
+}
+:global .cursor-hard::after {
+  animation: hardblink 0.7s infinite;
+}
+:global .no-cursor::after {
+  content: none;
+}
+// :global  @keyframes softblink {
+//   0% { opacity: 1; }
+//   50% { opacity: 0; }
+//   100% { opacity: 1; }
+// }
+// :global  @keyframes hardblink {
+//   0% { opacity: 1; }
+//   49% { opacity: 1; }
+//   50% { opacity: 0; }
+//   100% { opacity: 0; }
+// }
+// :global .white-space { white-space: pre-wrap; }
+
+@media all and (min-width: 520px) and (max-width: 1000px) {
+  body{
+    font-size: 80%;
+  }
+}
+
+@media all and (max-width: 520px) {
+  body{
+    font-size: 65%;
+  }
+}
+
+/* @media all and (max-width: 699px) and (min-width: 520px) {
+
+} */
