@@ -1,5 +1,5 @@
 import React from 'react'
-import NextSeo from 'next-seo'
+import { NextSeo } from 'next-seo';
 import 'default-passive-events'
 import Landing from 'components/landing/Landing'
 import Skills from 'components/skills/Skills'
@@ -24,7 +24,7 @@ export default class extends React.Component {
           config={{
             title: 'Passionate full stack web developer',
             description: "I'm Linas, a freelance full stack web developer based in Nantwich, looking for my next big challange!",
-            canonical: 'http://linas.io',
+            canonical: 'http://shirase.network',
           }}
         />
         <Landing />
