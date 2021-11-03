@@ -34,7 +34,7 @@
     "scroll-to-element": "^2.0.3",
     "tween": "^0.9.0",
     "typer-js": "^5.0.1",
-    "validator": "^10.11.0",
+    "validator": "^13.7.0",
     "webfontloader": "^1.6.28",
     "zenscroll": "^4.0.2"
   }
